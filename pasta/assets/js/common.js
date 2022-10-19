@@ -12,23 +12,25 @@ function navFunc() {
 
         // 스크롤 이동
         liEl.on("click", function(e) {
+            e.preventDefault();
+
             let targetIdx = $(this).data("idx");
 
             $("html, body").animate({"scrollTop": Math.ceil(sectionTop[targetIdx] - navEl.innerHeight())}, 500);
-            e.preventDefault();
         });
 
         $(window).on("resize", function() {
             $.each(section, function(i, val) {
                 sectionTop[i] = $(val).offset().top;
             });
-        })
+        });
 
         $(window).on('scroll', function() {
             let winTop = Math.ceil($(window).scrollTop());
 
             if (winTop >= $(".brand").innerHeight()) {
                 navEl.addClass('is-fixed');
+
                 $(".brand").css({"margin-bottom":navEl.innerHeight()});
 
                 $.each(section, function(i, val) {
@@ -41,11 +43,12 @@ function navFunc() {
                 $(".menu_item").attr("src", "./assets/images/menu.png");
                 $(".brand").css({"margin-bottom":0});
             }
-        })
+        });
     }, 300);
 }
 
 $(function() {
     navFunc();
+
     $('img[usemap]').rwdImageMaps();
 });
