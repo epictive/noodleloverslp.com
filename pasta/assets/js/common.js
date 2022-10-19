@@ -14,7 +14,7 @@ function navFunc(){
         liEl.on("click", function(e){
             let targetIdx = $(this).data("idx")
 
-            $("html, body").animate({"scrollTop": Math.ceil(sectionTop[targetIdx] - navEl.outerHeight())}, 500)
+            $("html, body").animate({"scrollTop": Math.ceil(sectionTop[targetIdx] - navEl.innerHeight())}, 500)
             e.preventDefault()
         })
 
@@ -27,12 +27,12 @@ function navFunc(){
         $(window).on('scroll', function(){
             let winTop = $(window).scrollTop()
 
-            if (winTop >= $(".brand").outerHeight()) {
+            if (winTop >= $(".brand").innerHeight()) {
                 navEl.addClass('is-fixed')
-                $(".brand").css({"margin-bottom":navEl.outerHeight()})
+                $(".brand").css({"margin-bottom":navEl.innerHeight()})
 
                 $.each(section, function(i, val){
-                    if(winTop >= Math.ceil(sectionTop[i] - navEl.outerHeight())){
+                    if(winTop >= Math.ceil(sectionTop[i] - navEl.innerHeight())){
                         $(".menu_item").attr("src", "./assets/images/menu_on_"+i+".png")
                     }
                 })
@@ -43,7 +43,7 @@ function navFunc(){
             }
         })
     }, 300)
-    
+
 }
 $(function() {
     navFunc()
