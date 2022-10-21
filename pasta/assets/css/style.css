@@ -104,11 +104,11 @@
 .cont_4 .vod_wrap {
 	overflow:hidden;
 	position:absolute;
-    bottom:17%;
+    bottom:23%;
     width:100%;
     margin:0 auto;
 	height:0;
-	padding-bottom:56.26%;
+	padding-bottom:50%;
 }
 .cont_4 .vod_wrap iframe {
 	position:absolute;
