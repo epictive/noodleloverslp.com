@@ -2,7 +2,7 @@
 
 ## Deployment
 ```AWS CLI
-$ aws s3 sync ./ s3://noodleloverslp.com --delete --exclude ".gitignore" --exclude ".vscode" --exclude ".git/*" --exclude "README.md" --profile noodleloverslp
+$ aws s3 sync ./ s3://noodleloverslp.com --delete --exclude ".gitignore" --exclude ".vscode/*" --exclude ".git/*" --exclude "README.md" --profile noodleloverslp
 ```
 ## Invalidation
 ```AWS CLI
