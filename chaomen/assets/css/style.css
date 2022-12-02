@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+.wrapper {
+    width:100%;
+    margin:0 auto;
+}
+.wrapper .inner {
+    position: relative;
+    width:100rem;
+    max-width:100%;
+    margin:0 auto;
+}
+
+.wrapper img {
+    width: 100%;
+    height: auto;
+    vertical-align:top;
+}
+
+.header {
+    width:100%;
+}
+
+.brand {
+    display:block;
+    position:relative;
+}
+
+.menu {
+    display:block;
+    position:relative;
+    z-index:100;
+    border-bottom:1px solid #cecece;
+}
+.menu * {
+    outline:0
+}
+.menu:before {
+    content:"";
+    width:100%;
+    position:absolute;
+    top:0;
+    border-top:1px solid #cecece;
+}
+.menu:after {
+    content:"";
+    width:100%;
+    position:absolute;
+    bottom:0;
+    border-top:1px solid #cecece;
+}
+.menu.is-fixed {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+}
+
+.cont {
+    position:relative;
+}
+.cont .img_wrap {
+    overflow:hidden;
+    position:absolute;
+    top:15%;
+    width:100%;
+    margin:0 auto;
+    padding:0 2rem;
+    height:0;
+    padding-bottom:56.26%;
+}
+.cont .img_wrap .img {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.cont .btn_wrap {
+    position:absolute;
+    bottom:4.5%;
+    left:50%;
+    display:block;
+    width:37.8rem;
+    height:11.1rem;
+    margin:0 auto;
+    transform:translateX(-50%);
+}
+.cont .btn_wrap a {
+    display:block;
+    width:100%;
+    height:100%;
+    font-size:0;
+    text-indent:-9999px;
+    background:url(../images/bt.png) no-repeat;
+    background-size:contain;
+}
+.cont_5 .btn_wrap {bottom:13%;}
+@media (max-width:767px) {
+    .cont_1 .btn_wrap {bottom:3.5%;}
+    .cont_5 .btn_wrap {bottom:7.5%;}
+}
+
+.cont_5 .vod_wrap {
+	overflow:hidden;
+	position:absolute;
+    bottom:51%;
+    width:100%;
+    margin:0 auto;
+	height:0;
+	padding-bottom:50%;
+}
+.cont_5 .vod_wrap iframe {
+	position:absolute;
+	top:0;
+	left:3rem;
+    right:3rem;
+	width:calc(100% - 6rem);
+	height:100%;
+}
+
+.link_wrap {
+    position:absolute;
+    bottom:30rem;
+    width:calc(100% - 8rem);
+    height:28rem;
+    margin:0 4rem;
+    font-size:0;
+}
+.link_wrap > a {
+    display:inline-block;
+    width:25%;
+    height:100%;
+}
